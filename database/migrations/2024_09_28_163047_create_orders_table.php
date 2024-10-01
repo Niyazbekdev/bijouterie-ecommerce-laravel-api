@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('status_id')->nullable()->constrained()->nullOnDelete();
             $table->foreignId('payment_type_id')->nullable()->constrained()->nullOnDelete();
             $table->unsignedInteger('total_price');
+            $table->unsignedInteger('product_count')->default(1);
             $table->dateTime('status_date');
             $table->json('products');
             $table->timestamps();

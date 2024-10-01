@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Relations\BelongsTo;
 class Order extends Model
 {
     protected $fillable = [
-        'user_id', 'status_id', 'payment_type_id', 'total_price', 'status_date', 'products'
+        'user_id', 'status_id', 'payment_type_id', 'total_price', 'status_date', 'products', 'product_count'
     ];
 
     protected $casts = [
@@ -16,6 +16,7 @@ class Order extends Model
         'status_id' => 'integer',
         'payment_type_id' => 'integer',
         'total_price' => 'integer',
+        'product_count' => 'integer'
     ];
 
     public function user(): BelongsTo

@@ -9,6 +9,7 @@ use App\Http\Controllers\v1\admin\OrderController;
 use App\Http\Controllers\v1\admin\ProductController;
 use App\Http\Controllers\v1\admin\ProductImageController;
 use App\Http\Controllers\v1\admin\ReviewController;
+use App\Http\Controllers\v1\admin\StatisticController;
 use App\Http\Controllers\v1\ProfileController;
 use App\Http\Controllers\v1\admin\LoginController;
 use Illuminate\Support\Facades\Route;
@@ -37,4 +38,9 @@ Route::prefix('admin')
 
         Route::get('reviews', [ReviewController::class, 'index']);
         Route::put('reviews/{review}', [ReviewController::class, 'update']);
+
+        Route::get('orders/statistics/day', [StatisticController::class, 'getDay']);
+        Route::get('orders/statistics/week', [StatisticController::class, 'getWeek']);
+        Route::get('orders/statistics/month', [StatisticController::class, 'getMonth']);
+        Route::get('orders/statistics/year', [StatisticController::class, 'getYear']);
 });

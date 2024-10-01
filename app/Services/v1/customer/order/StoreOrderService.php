@@ -102,6 +102,7 @@ class StoreOrderService
             'payment_type_id' => $paymentTypeId,
             'status_date' => now(),
             'total_price' => $totalPrice,
+            'product_count' => count($dataProduct),
             'products' => json_encode($dataProduct),
         ]);
     }

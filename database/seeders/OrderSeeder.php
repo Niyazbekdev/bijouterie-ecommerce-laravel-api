@@ -36,6 +36,7 @@ class OrderSeeder extends Seeder
                         ]
                     ]
                 ]),
+                'product_count' => 1,
                 'created_at' => now(),
                 'updated_at' => now(),
             ]

@@ -21,6 +21,7 @@ class OrderResource extends JsonResource
             'status_date' => $this->status_date,
             'payment_type' => new NameResource($this->whenLoaded('paymentType')),
             'total_price' => $this->total_price,
+            'product_count' => $this->product_count,
             'products' => json_decode($this->products)
         ];
     }
