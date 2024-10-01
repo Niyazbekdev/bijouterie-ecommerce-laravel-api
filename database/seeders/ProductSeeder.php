@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\Product;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -158,9 +157,23 @@ class ProductSeeder extends Seeder
             ]
         ];
 
+        $discount = [
+            [
+                'product_id' => 2,
+                'name' => 'guzgi akciya',
+                'percent' => null,
+                'sum' => 1000,
+                'from_date' => "2024-09-01 01:00:00",
+                'to_date' => "2024-11-30 02:00:00",
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        ];
+
         DB::table('brends')->insert($brend);
         Product::insert($products);
         DB::table('color_product')->insert($colors);
         DB::table('media')->insert($media);
+        DB::table('discounts')->insert($discount);
     }
 }

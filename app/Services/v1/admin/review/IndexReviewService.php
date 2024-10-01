@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 
 class IndexReviewService
 {
-    public function execute(Request $request)
+    public function execute(Request $request): GeneralCollection
     {
         $reviews = Review::with('user')
             ->when($request->created_at, function ($query) use ($request) {

@@ -4,7 +4,7 @@ namespace App\Http\Requests\v1;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreChildCategoryRequest extends FormRequest
+class StoreAnswerRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,9 +22,7 @@ class StoreChildCategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'children.*.name.kaa' => 'required',
-            'children.*.name.ru' => 'required',
-            'children.*icon' => 'nullable|file|image|mimes:jpeg,png,jpg,webp|max:5154',
+            'answer' => 'required',
         ];
     }
 }

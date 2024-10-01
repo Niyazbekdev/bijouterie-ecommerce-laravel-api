@@ -24,7 +24,7 @@ class ReviewResource extends JsonResource
             'rating' => $this->rating,
             'comment' => $this->comment,
             'user' => $user,
-            'answer' => json_decode($this->answer),
+            'answer' => json_decode($this->answers),
             'created_at' => $this->created_at->format('Y-m-d H:i:s'),
             'updated_at' => $this->updated_at->format('Y-m-d H:i:s'),
         ];

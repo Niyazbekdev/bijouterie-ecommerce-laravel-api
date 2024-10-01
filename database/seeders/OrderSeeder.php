@@ -24,10 +24,10 @@ class OrderSeeder extends Seeder
                 'products' => json_encode([
                     [
                         'id' => 2,
-                        'name' => json_encode([
+                        'name' => [
                             'kaa' => 'Әеллер жүзиклери комплекси, 2.',
                             'ru' => 'Набор женских колец, 2 шт',
-                        ]),
+                        ],
                         'quantity' => 1,
                         'price' => 10000,
                         'image' => [

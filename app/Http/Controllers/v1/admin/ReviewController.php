@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\v1\admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\v1\StoreAnswerRequest;
 use App\Models\Review;
 use App\Services\v1\admin\review\IndexReviewService;
 use Illuminate\Http\Request;
@@ -14,7 +15,7 @@ class ReviewController extends Controller
         return app(IndexReviewService::class)->execute($request);
     }
 
-    public function update(Request $request, Review $review)
+    public function update(StoreAnswerRequest $request, Review $review)
     {
         $answer = [
             'answer' => $request->answer,

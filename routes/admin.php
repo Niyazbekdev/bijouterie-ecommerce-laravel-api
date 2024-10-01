@@ -36,5 +36,5 @@ Route::prefix('admin')
         Route::get('orders', [OrderController::class, 'index']);
 
         Route::get('reviews', [ReviewController::class, 'index']);
-        Route::post('reviews/{review}', [ReviewController::class, 'store']);
+        Route::put('reviews/{review}', [ReviewController::class, 'update']);
 });
