@@ -29,7 +29,7 @@ class StoreProductRequest extends FormRequest
             'price' => 'required',
             'quantity' => 'required',
             'category_id' => 'required',
-            'brend_id' => 'nullable',
+            'brand_id' => 'nullable',
             'images' => 'nullable|array',
             'images.*' => 'file|image|mimes:jpeg,png,jpg,gif|max:5156',
             'colors' => 'nullable|array',

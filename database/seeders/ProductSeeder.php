@@ -144,7 +144,7 @@ class ProductSeeder extends Seeder
             ],
         ];
 
-        $brend = [
+        $brand = [
             [
                 'name' => 'Allure',
                 'created_at' => now(),
@@ -170,7 +170,7 @@ class ProductSeeder extends Seeder
             ]
         ];
 
-        DB::table('brands')->insert($brend);
+        DB::table('brands')->insert($brand);
         Product::insert($products);
         DB::table('color_product')->insert($colors);
         DB::table('media')->insert($media);

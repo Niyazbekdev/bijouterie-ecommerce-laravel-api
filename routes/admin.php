@@ -27,7 +27,7 @@ Route::prefix('admin')
         Route::post('categories/{category}/image', [CategoryActionController::class, 'addImage']);
         Route::delete('categories/{category}/image', [CategoryActionController::class, 'deleteImage']);
 
-        Route::apiResource('brends', BrandController::class);
+        Route::apiResource('brands', BrandController::class);
         Route::apiResource('products', ProductController::class);
         Route::apiResource('colors', ColorController::class);
 

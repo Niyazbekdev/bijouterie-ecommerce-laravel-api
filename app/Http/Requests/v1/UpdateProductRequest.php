@@ -27,7 +27,7 @@ class UpdateProductRequest extends FormRequest
             'price' => 'nullable|integer|min:0',
             'quantity' => 'nullable|integer|min:0',
             'category_id' => 'nullable|integer',
-            'brend_id' => 'nullable|integer',
+            'brand_id' => 'nullable|integer',
             'colors' => 'nullable|array',
             'colors.*.id' => 'nullable|integer',
             'colors.*.qauntity' => 'nullable|string',

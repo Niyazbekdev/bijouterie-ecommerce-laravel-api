@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Services\v1\admin\brend;
+namespace App\Services\v1\admin\brand;
 
 use Illuminate\Http\JsonResponse;
 
-class UpdateBrendService
+class UpdateBrandService
 {
-    public function execute(array $data, object $brend): JsonResponse
+    public function execute(array $data, object $brand): JsonResponse
     {
-        $brend->update([
+        $brand->update([
             'name' => $data['name'],
         ]);
 

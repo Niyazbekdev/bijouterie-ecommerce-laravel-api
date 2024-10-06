@@ -26,7 +26,7 @@ class StoreProductService
             'description' => $data['description'] ?? null,
             'price' => $data['price'],
             'quantity' => $data['quantity'],
-            'brend_id' => $data['brend'] ?? null,
+            'brand_id' => $data['brand_id'] ?? null,
             'category_id' => $data['category_id'],
         ];
     }

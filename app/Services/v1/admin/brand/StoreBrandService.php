@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Services\v1\admin\brend;
+namespace App\Services\v1\admin\brand;
 
 use App\Models\Brand;
 
-class StoreBrendService
+class StoreBrandService
 {
     public function execute(array $data): bool
     {

@@ -3,43 +3,43 @@
 namespace App\Http\Controllers\v1\admin;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\v1\StoreBrendRequest;
+use App\Http\Requests\v1\StoreBrandRequest;
 use App\Http\Resources\v1\NameResource;
 use App\Models\Brand;
-use App\Services\v1\admin\brend\IndexBrendService;
-use App\Services\v1\admin\brend\StoreBrendService;
-use App\Services\v1\admin\brend\UpdateBrendService;
+use App\Services\v1\admin\brand\IndexBrandService;
+use App\Services\v1\admin\brand\StoreBrandService;
+use App\Services\v1\admin\brand\UpdateBrandService;
 use Illuminate\Http\Request;
 
 class BrandController extends Controller
 {
     public function index(Request $request)
     {
-        return app(IndexBrendService::class)->execute($request);
+        return app(IndexBrandService::class)->execute($request);
     }
 
-    public function store(StoreBrendRequest $request)
+    public function store(StoreBrandRequest $request)
     {
-        $brend = app(StoreBrendService::class)->execute($request->validated());
+        $brand = app(StoreBrandService::class)->execute($request->validated());
 
         return response()->json([
-            'success' => $brend,
+            'success' => $brand,
         ]);
     }
 
-    public function show(Brand $brend)
+    public function show(Brand $brand)
     {
-        return new NameResource($brend);
+        return new NameResource($brand);
     }
 
-    public function update(StoreBrendRequest $request, Brand $brend)
+    public function update(StoreBrandRequest $request, Brand $brand)
     {
-        return app(UpdateBrendService::class)->execute($request->validated(), $brend);
+        return app(UpdateBrandService::class)->execute($request->validated(), $brand);
     }
 
-    public function destroy(Brand $brend)
+    public function destroy(Brand $brand)
     {
-        $brend->delete();
+        $brand->delete();
 
         return response()->json([
             'success' => true,
