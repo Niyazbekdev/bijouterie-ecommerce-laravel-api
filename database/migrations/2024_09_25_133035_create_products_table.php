@@ -19,7 +19,7 @@ return new class extends Migration
             $table->unsignedInteger('quantity');
             $table->unsignedBigInteger('sold')->default(0);
             $table->foreignId('category_id')->constrained();
-            $table->foreignId('brend_id')->nullable()->constrained()->nullOnDelete();
+            $table->foreignId('brand_id')->nullable()->constrained()->nullOnDelete();
             $table->unsignedBigInteger('discount_price')->default(0);
             $table->timestamps();
         });

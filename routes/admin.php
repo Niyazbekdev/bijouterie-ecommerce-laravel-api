@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\v1\admin\BrendController;
+use App\Http\Controllers\v1\admin\BrandController;
 use App\Http\Controllers\v1\admin\CategoryController;
 use App\Http\Controllers\v1\admin\CategoryActionController;
 use App\Http\Controllers\v1\admin\ColorController;
@@ -27,7 +27,7 @@ Route::prefix('admin')
         Route::post('categories/{category}/image', [CategoryActionController::class, 'addImage']);
         Route::delete('categories/{category}/image', [CategoryActionController::class, 'deleteImage']);
 
-        Route::apiResource('brends', BrendController::class);
+        Route::apiResource('brends', BrandController::class);
         Route::apiResource('products', ProductController::class);
         Route::apiResource('colors', ColorController::class);
 

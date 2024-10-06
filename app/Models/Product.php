@@ -15,7 +15,7 @@ class Product extends Model
     use HasTranslations;
 
     protected $fillable = [
-        'name', 'description', 'price', 'quantity', 'brend_id', 'category_id', 'sold', 'discount_price'
+        'name', 'description', 'price', 'quantity', 'brand_id', 'category_id', 'sold', 'discount_price'
     ];
 
     public array $translatable = [
@@ -25,15 +25,15 @@ class Product extends Model
     protected $casts = [
         'price' => 'integer',
         'quantity' => 'integer',
-        'brend_id' => 'integer',
+        'brand_id' => 'integer',
         'category_id' => 'integer',
         'sold' => 'integer',
         'discount_price' => 'integer'
     ];
 
-    public function brend(): BelongsTo
+    public function brand(): BelongsTo
     {
-        return $this->belongsTo(Brend::class);
+        return $this->belongsTo(Brand::class);
     }
 
     public function category(): BelongsTo

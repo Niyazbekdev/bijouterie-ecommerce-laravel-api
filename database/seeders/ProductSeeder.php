@@ -26,7 +26,7 @@ class ProductSeeder extends Seeder
                 'price' => 25000,
                 'quantity' => 5,
                 'category_id' => 3,
-                'brend_id' => 1,
+                'brand_id' => 1,
                 'discount_price' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -43,7 +43,7 @@ class ProductSeeder extends Seeder
                 'price' => 6000,
                 'quantity' => 8,
                 'category_id' => 4,
-                'brend_id' => null,
+                'brand_id' => null,
                 'discount_price' => 5000,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -60,7 +60,7 @@ class ProductSeeder extends Seeder
                 'price' => 16000,
                 'quantity' => 3,
                 'category_id' => 2,
-                'brend_id' => null,
+                'brand_id' => null,
                 'discount_price' => 0,
                 'created_at' => now(),
                 'updated_at' => now(),
@@ -170,7 +170,7 @@ class ProductSeeder extends Seeder
             ]
         ];
 
-        DB::table('brends')->insert($brend);
+        DB::table('brands')->insert($brend);
         Product::insert($products);
         DB::table('color_product')->insert($colors);
         DB::table('media')->insert($media);

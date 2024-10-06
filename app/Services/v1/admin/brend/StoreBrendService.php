@@ -2,13 +2,13 @@
 
 namespace App\Services\v1\admin\brend;
 
-use App\Models\Brend;
+use App\Models\Brand;
 
 class StoreBrendService
 {
     public function execute(array $data): bool
     {
-        Brend::firstOrCreate([
+        Brand::firstOrCreate([
             'name' => $data['name'],
         ]);
 

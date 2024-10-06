@@ -12,7 +12,7 @@ class IndexProductService
     {
         $searchTerm = mb_strtolower($request->search, 'UTF-8');
 
-        return Product::with(['category', 'brend', 'media'])
+        return Product::with(['category', 'brand', 'media'])
             ->where(function ($query) use ($searchTerm) {
                 $query->where(function ($query) use ($searchTerm) {
                     $query->whereRaw('LOWER(JSON_EXTRACT(name, "$.kaa")) LIKE ?', ["%{$searchTerm}%"])

@@ -18,7 +18,7 @@ class ProductResource extends JsonResource
             'id' => $this->id,
             'name' => $this->getTranslations('name'),
             'category' => new TranslateNameResource($this->whenLoaded('category')),
-            'brend' => new NameResource($this->whenLoaded('brend')),
+            'brand' => new NameResource($this->whenLoaded('brand')),
             'price' => $this->price,
             'discount_price' => $this->discount_price,
             'quantity' => $this->quantity,
